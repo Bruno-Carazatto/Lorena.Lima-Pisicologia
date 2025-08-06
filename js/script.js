@@ -150,3 +150,22 @@ window.onload = function() {
         typeWriter(heroTitle, text);
     }
 };
+
+// Máscara de Telefone (formato: (99) 99999-9999)
+const phoneInput = document.getElementById('phone');
+phoneInput.addEventListener('input', function () {
+    let cleaned = this.value.replace(/\D/g, '');
+    if (cleaned.length > 11) cleaned = cleaned.slice(0, 11);
+
+    const part1 = cleaned.slice(0, 2);
+    const part2 = cleaned.slice(2, 7);
+    const part3 = cleaned.slice(7, 11);
+
+    if (cleaned.length > 7) {
+        this.value = `(${part1}) ${part2}-${part3}`;
+    } else if (cleaned.length > 2) {
+        this.value = `(${part1}) ${cleaned.slice(2)}`;
+    } else if (cleaned.length > 0) {
+        this.value = `(${cleaned}`;
+    }
+});
