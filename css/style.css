@@ -841,3 +841,40 @@ section {
         font-size: 1.5rem;
     }
 }
+
+/* Estilo para Páginas Legais */
+.legal-page {
+    padding: 100px 20px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.legal-page h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--dark-gray);
+}
+
+.legal-page h2 {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 15px;
+}
+
+.legal-page p, .legal-page li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.legal-page ul {
+    margin-left: 20px;
+    list-style: disc;
+}
